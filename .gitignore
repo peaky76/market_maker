@@ -1,0 +1,9 @@
+bin/
+obj/
+Web References/
+*.vb
+*.resx
+*.sln
+*.suo
+*.vbproj
+*.vbproj.user
