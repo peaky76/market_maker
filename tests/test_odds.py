@@ -32,3 +32,12 @@ def test_as_fractional_extreme_odds_against():
         
 def test_as_probability():
     assert Odds(4).as_probability() == 0.25
+
+def test_to_fractional_string_evens():
+    assert Odds(2).to_fractional_string() == "Evens"
+        
+def test_to_fractional_string_10_3():
+    assert Odds(4.33).to_fractional_string() == "100/30"
+
+def test_to_fractional_string_regular():
+    assert Odds(34).to_fractional_string() == "33/1"  

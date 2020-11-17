@@ -1,5 +1,3 @@
 from odds import Odds
 
-print(Odds.list_all_fractionals())
-
-print(Odds(4.3).as_fractional())
+print(Odds(4.3).to_fractional_string())

@@ -8,7 +8,7 @@ class Odds:
     _VALID_FRACTIONS = [
         # Denominator, valid_from_decimal, valid_to_decimal
         (2, 2, 8),
-        (3, 3, 3.5),
+        (3, 3.25, 3.5),
         (4, 2, 4),
         (5, 1, 2),
         (8, 1.25, 2),
@@ -60,4 +60,14 @@ class Odds:
         return min(Odds.list_all_fractionals(), key=absolute_difference)
     
     def as_probability(self):
-        return 1 / self._decimal      
+        return 1 / self._decimal   
+    
+    def to_fractional_string(self):
+        if self.as_fractional() == (3, 10):
+            return "30/100"
+        elif self.as_fractional() == (1, 1):
+            return "Evens"
+        elif self.as_fractional() == (10, 3):
+            return "100/30"
+        else:
+            return '/'.join(str(x) for x in self.as_fractional())   
