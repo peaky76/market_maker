@@ -6,11 +6,11 @@ class Bet:
         """ Calculate the recommended Kelly criterion bet 
         for any given win probability, decimal win odds and size of bank"""
 
-        p = prob  # Win probability
+        p = probability  # Win probability
         q = 1 - p  # Loss probability
         odds = market_odds - 1 # Converts 'odds' from decimal into odds to 1
         
-        edge = (o * p) - q
+        edge = (odds * p) - q
         fraction_to_bet = edge / odds # Kelly formula, aka "edge over odds"  
         kelly = bank * fraction_to_bet     
 
