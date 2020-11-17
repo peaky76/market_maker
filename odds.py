@@ -35,7 +35,7 @@ class Odds:
         return cls(1 / prob)  
  
     @classmethod
-    def list_all_fractionals(cls):
+    def all_fractionals(cls):
         permitted_fractionals = []
         # Add whole numbers from evens to 1000/1
         for enum in cls._VALID_WHOLES:
@@ -57,7 +57,7 @@ class Odds:
         
     def as_fractional(self):
         absolute_difference = lambda x: abs(self._decimal - Odds.from_fractional(x[0], x[1]).as_decimal())
-        return min(Odds.list_all_fractionals(), key=absolute_difference)
+        return min(Odds.all_fractionals(), key=absolute_difference)
     
     def as_probability(self):
         return 1 / self._decimal   
