@@ -7,3 +7,4 @@ Web References/
 *.suo
 *.vbproj
 *.vbproj.user
+venv/ 
