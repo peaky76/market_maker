@@ -8,6 +8,14 @@ class Odds:
     @classmethod
     def from_fractional(cls, enum, denom):
         return cls((enum / denom) + 1)
+    
+    @classmethod
+    def from_probability(cls, prob):
+        return cls(1 / prob)  
+        
+    # @property
+    # def fractional():
+        
 
     # _valid_denoms = [
     #     # Enumerator, valid_from, valid_to
@@ -17,14 +25,6 @@ class Odds:
     #     (8, 1.25, 2),
     #     (10, 1, 1.1)
     # ]
-
-    # @classmethod
-    # def decimal(cls, value):
-    #     return cls(value)
-
-    # @classmethod
-    # def fractional(cls, enum, denom):
-    #     return cls((enum / denom) + 1)
 
     # @classmethod
     # def _generate_fractionals(cls):
@@ -40,7 +40,3 @@ class Odds:
     # @classmethod
     # def all_fractionals(cls):
     #     return cls._generate_fractionals
-
-    # # @staticmethod
-    # # def _convert_to_decimal(denom, enum):
-    # #     return (denom / enum) + 1
