@@ -17,5 +17,8 @@ def example_market():
         market.add_runner(runner)    
     return market
 
+def test_favourite(example_market):
+    assert example_market.favourite.name == "Argy Bargy"
+    
 def test_overround(example_market):
     assert example_market.overround == 110.00

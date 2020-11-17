@@ -2,6 +2,10 @@ class Market:
     
     def __init__(self, runners = None):
         self.runners = runners if runners else []
+    
+    @property
+    def favourite(self):
+        return max(self.runners, key=lambda runner: runner.odds.as_probability())
         
     @property
     def overround(self):
