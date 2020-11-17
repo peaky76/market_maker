@@ -8,4 +8,4 @@ A web app for creating your own betting markets (aka tissue prices) based on:
 ## Development
 
 Original version created in VB.NET by [@peaky76](https://github.com/peaky76) as a personal project while working at [Racing Research](www.racingresearch.co.uk) in 2012.
-Translated to Python in Oct 2020.
+Translated to Python in Oct/Nov 2020.
